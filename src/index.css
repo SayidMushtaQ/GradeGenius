@@ -12,9 +12,26 @@
   --box-primary-colour:#FFFFFF;
   --box-secondary-colour:#ECEFF1;
   --bg-overflow-colour:#D9D9D9;
-
+  --box-padding:20px 35px;
+  --box-margin:10px;
+  --box-round:15px;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+*,body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color: var(--bg-secondary-colour);
+  color: var(--text-primary-colour);
+}
+
+h1{
+  color: var(--text-primary-colour);
+  font-size: 2rem;
 }
