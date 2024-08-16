@@ -1,5 +1,7 @@
 import "./App.css";
-import ErrorNotFound from "./components/ErrorNotFound";
+import AddSubjects from "./components/AddSubjects";
+// import ErrorNotFound from "./components/ErrorNotFound";
+import GradesProvider from "./context/Grades.context";
 function App() {
   return (
     <div className="container">
@@ -16,9 +18,11 @@ function App() {
             </header>
           </section>
           <span>Grades</span>
-          <div className="box-body">
-            <ErrorNotFound />
-          </div>
+          <GradesProvider>
+            <div className="box-body">
+              <AddSubjects/>
+            </div>
+          </GradesProvider>
         </div>
       </div>
     </div>
