@@ -35,3 +35,11 @@ h1{
   color: var(--text-primary-colour);
   font-size: 2rem;
 }
+
+.bth-primary{
+  color: white;
+  border: none;
+  background-color: var(--btn-primary);
+  border-radius: 5px;
+  cursor: pointer;
+}

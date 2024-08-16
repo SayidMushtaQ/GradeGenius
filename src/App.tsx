@@ -1,5 +1,5 @@
 import "./App.css";
-
+import ErrorNotFound from "./components/ErrorNotFound";
 function App() {
   return (
     <div className="container">
@@ -16,8 +16,10 @@ function App() {
             </header>
           </section>
           <span>Grades</span>
+          <div className="box-body">
+            <ErrorNotFound />
+          </div>
         </div>
-        
       </div>
     </div>
   );
