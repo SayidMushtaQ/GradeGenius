@@ -1,8 +1,11 @@
+import { useCallback, useState } from "react";
 import "./App.css";
 import AddSubjectsPopUP from "./components/AddSubjectsPopUP";
-// import ErrorNotFound from "./components/ErrorNotFound";
+import ErrorNotFound from "./components/ErrorNotFound";
 import GradesProvider from "./context/Grades.context";
 function App() {
+  const [add, setAdd] = useState(false);
+  const hanldeAddPopUp = useCallback(() => setAdd((pre) => !pre), []);  
   return (
     <div className="container">
       <div className="sub-container">
@@ -20,7 +23,8 @@ function App() {
           <span>Grades</span>
           <GradesProvider>
             <div className="box-body">
-              <AddSubjectsPopUP/>
+              <ErrorNotFound setAdd={hanldeAddPopUp} />
+              {add && <AddSubjectsPopUP setAdd={hanldeAddPopUp}/>}
             </div>
           </GradesProvider>
         </div>

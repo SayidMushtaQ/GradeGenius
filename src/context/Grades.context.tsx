@@ -2,19 +2,16 @@ import React,{createContext, useState} from 'react'
 
 
 const defaultValues:GradeContextTypes = {
-  subjects:[{name:'',marks:0}],
+  subjects:[{sub:'',marks:''}],
   createSub:()=>{}
 }
 
 export const GradeContext = createContext<GradeContextTypes>(defaultValues)
 
 export default function GradeProvider({children}:{children:React.ReactNode}) {
-  const [subjects,setSubjects] = useState([{
-    name:'',
-    marks:0
-  }]);
-  const createSub = (name:string,marks:number)=>{
-    setSubjects(pre=>[...pre,{name,marks}]);
+  const [subjects,setSubjects] = useState<{sub:string,marks:string}[]>([]);
+  const createSub = (sub:string,marks:string)=>{
+    setSubjects(pre=>[...pre,{sub,marks}]);
   }
 
   return(
