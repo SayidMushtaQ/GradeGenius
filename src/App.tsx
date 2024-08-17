@@ -1,5 +1,5 @@
 import "./App.css";
-import AddSubjects from "./components/AddSubjects";
+import AddSubjectsPopUP from "./components/AddSubjectsPopUP";
 // import ErrorNotFound from "./components/ErrorNotFound";
 import GradesProvider from "./context/Grades.context";
 function App() {
@@ -20,7 +20,7 @@ function App() {
           <span>Grades</span>
           <GradesProvider>
             <div className="box-body">
-              <AddSubjects/>
+              <AddSubjectsPopUP/>
             </div>
           </GradesProvider>
         </div>

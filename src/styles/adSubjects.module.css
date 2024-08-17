@@ -1,0 +1,28 @@
+.subjectContainer{
+    width: 20rem;
+    background-color: var(--bg-primary-colour);
+    border-radius: var(--box-round);
+    padding: var(--box-padding);
+}
+.subjectForm {
+    margin-top: 1rem;
+}
+.inputs{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 1.2rem;
+}
+.inputs > input{
+    padding: 8px;
+    border: 1px solid var(--border-primary-colour);
+    outline: none;
+}
+
+.formButtons > button{
+    padding:7px 20px;
+}
+.formButtons{
+    display: flex;
+    gap: 10px;
+}
