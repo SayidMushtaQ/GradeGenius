@@ -9,7 +9,11 @@ const defaultValues:GradeContextTypes = {
 export const GradeContext = createContext<GradeContextTypes>(defaultValues)
 
 export default function GradeProvider({children}:{children:React.ReactNode}) {
-  const [subjects,setSubjects] = useState<{sub:string,marks:string}[]>([]);
+  const [subjects,setSubjects] = useState<{sub:string,marks:string}[]>([
+    { sub: "Geography", marks: '90' }, { sub: "Science", marks: '88' },
+    { sub: "English", marks: '92' },
+    { sub: "History", marks: '85' },
+    { sub: "Geography", marks: '90' }, { sub: "Geography", marks: '90' }, { sub: "Geography", marks: '90' }]);
   const createSub = (sub:string,marks:string)=>{
     setSubjects(pre=>[...pre,{sub,marks}]);
   }
