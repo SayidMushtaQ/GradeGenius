@@ -1,4 +1,6 @@
 interface GradeContextTypes{
     createSub: (name:string,marks:string) => name
-    subjects:{sub:string,marks:string}[]
+    subjects:{sub:string,marks:string}[],
+    add:boolean,
+    hanldeAddPopUp: () => void
 }
