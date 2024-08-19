@@ -1,8 +1,7 @@
 import style from "../styles/grades.module.css";
 import { useGrade } from "../hooks/grade.context";
 export default function Grades() {
-  const { subjects } = useGrade();
-  console.log(subjects);
+  const { subjects,hanldeAddPopUp } = useGrade();
   return (
     <>
       <div className={style.gradesContainer}>
@@ -24,7 +23,7 @@ export default function Grades() {
         </div>
         <div className={style.gradesActions}>
           <button className="bth-primary">Calculate</button>
-          <button className="bth-primary">Add</button>
+          <button className="bth-primary" onClick={()=>hanldeAddPopUp()}>New sub</button>
         </div>
       </div>
     </>
