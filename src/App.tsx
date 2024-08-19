@@ -1,11 +1,12 @@
 import "./App.css";
-import Grades from './components/Grades'
-import AddSubjectsPopUP from "./components/AddSubjectsPopUP";
-import ErrorNotFound from "./components/ErrorNotFound";
+import CalcualtePopUp from "./components/CalcualtePopUp";
+// import Grades from './components/Grades'
+// import AddSubjectsPopUP from "./components/AddSubjectsPopUP";
+// import ErrorNotFound from "./components/ErrorNotFound";
 
-import {useGrade} from './hooks/grade.context'
+// import {useGrade} from './hooks/grade.context'
 function App() {
-  const {subjects,add,hanldeAddPopUp} = useGrade()
+  // const {subjects,add,hanldeAddPopUp} = useGrade()
   return (
     <div className="container">
       <div className="sub-container">
@@ -22,8 +23,9 @@ function App() {
           </section>
           <span>Grades</span>
             <div className="box-body">
-              {add && <AddSubjectsPopUP setAdd={hanldeAddPopUp}/>}
-              {!subjects.length ?   <ErrorNotFound setAdd={hanldeAddPopUp} /> : <Grades/>}
+              {/* {add && <AddSubjectsPopUP setAdd={hanldeAddPopUp}/>} */}
+              {/* {!subjects.length ?   <ErrorNotFound setAdd={hanldeAddPopUp} /> : <Grades/>} */}
+              <CalcualtePopUp/>
             </div>
         </div>
       </div>
