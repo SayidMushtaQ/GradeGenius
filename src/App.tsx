@@ -3,10 +3,13 @@ import "./App.css";
 import Grades from './components/Grades'
 import AddSubjectsPopUP from "./components/AddSubjectsPopUP";
 import ErrorNotFound from "./components/ErrorNotFound";
-import GradesProvider from "./context/Grades.context";
+
+import {useGrade} from './hooks/grade.context'
 function App() {
   const [add, setAdd] = useState(false);
   const hanldeAddPopUp = useCallback(() => setAdd((pre) => !pre), []);  
+  const {subjects} = useGrade()
+
   return (
     <div className="container">
       <div className="sub-container">
@@ -22,13 +25,10 @@ function App() {
             </header>
           </section>
           <span>Grades</span>
-          <GradesProvider>
             <div className="box-body">
-              {/* <ErrorNotFound setAdd={hanldeAddPopUp} /> */}
               {/* {add && <AddSubjectsPopUP setAdd={hanldeAddPopUp}/>} */}
-              <Grades/>
+              {subjects.length != 0 ?   <ErrorNotFound setAdd={hanldeAddPopUp} /> : <Grades/>}
             </div>
-          </GradesProvider>
         </div>
       </div>
     </div>

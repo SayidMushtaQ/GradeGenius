@@ -16,6 +16,7 @@ export default function AddSubjectsPopUP({setAdd}:{setAdd:()=>void}) {
     if (!newFormError.sub && !newFormError.marks) {
       setError({ sub: "", marks: "" });
       createSub(sub, marks);
+      setSub('')
       SuccessNotify("New Subject Added Successfully..!!🥳");
     } else {
       if (newFormError.sub) {
