@@ -6,5 +6,6 @@ interface GradeContextTypes{
     calcualte:boolean
     handleCalcualtePopUp:()=>void,
     handleCalcaulation:()=>void,
-    result:{marks:number,total:number,percentage:number} | null
+    result:{marks:number,total:number,percentage:number} | null,
+    onchangeHandleEdit:(e:React.ChangeEvent<HTMLInputElement>,index:number)=>void
 }

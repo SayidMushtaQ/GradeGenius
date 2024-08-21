@@ -9,7 +9,8 @@ const defaultValues:GradeContextTypes = {
   calcualte:false,
   handleCalcualtePopUp:()=>{},
   handleCalcaulation:()=>{},
-  result:null
+  result:null,
+  onchangeHandleEdit:()=>{}
 }
 
 export const GradeContext = createContext<GradeContextTypes>(defaultValues)
@@ -30,8 +31,13 @@ export default function GradeProvider({children}:{children:React.ReactNode}) {
    const percentage = (marks/total) * 100;
    setResult({marks,total,percentage:Number(percentage.toFixed(2))})
   }
+  const onchangeHandleEdit = useCallback((e:React.ChangeEvent<HTMLInputElement>,index:number) =>{
+      const newSubjects = [...subjects];
+      newSubjects[index].marks = e.target.value;
+      setSubjects(newSubjects); 
+  },[subjects])
   return(
-    <GradeContext.Provider value={{subjects,createSub,add,hanldeAddPopUp,calcualte,handleCalcualtePopUp,handleCalcaulation,result}}>
+    <GradeContext.Provider value={{subjects,createSub,add,hanldeAddPopUp,calcualte,handleCalcualtePopUp,handleCalcaulation,result,onchangeHandleEdit}}>
       {children}
     </GradeContext.Provider>
   ) 

@@ -1,7 +1,7 @@
 import style from "../styles/grades.module.css";
 import { useGrade } from "../hooks/grade.context";
 export default function Grades() {
-  const { subjects,hanldeAddPopUp,handleCalcualtePopUp,handleCalcaulation } = useGrade();
+  const { subjects,hanldeAddPopUp,handleCalcualtePopUp,handleCalcaulation,onchangeHandleEdit } = useGrade();
   const handleCalcualte = ()=>{
     handleCalcaulation();
     handleCalcualtePopUp()
@@ -19,7 +19,7 @@ export default function Grades() {
                   name="marks"
                   id="marks"
                   min={0}
-                  readOnly
+                  onChange={e=>onchangeHandleEdit(e,index)}
                   value={item.marks}
                 />
               </div>
