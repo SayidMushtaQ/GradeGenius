@@ -9,7 +9,6 @@ import GradesProvider from "./context/Grades.context";
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <GradesProvider>
-      <h1>HI</h1>
       <App />
     </GradesProvider>
     <ToastContainer/>
