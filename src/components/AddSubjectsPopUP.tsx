@@ -31,7 +31,7 @@ export default function AddSubjectsPopUP({setAdd}:{setAdd:()=>void}) {
   };
   return (
     <PopUPWrapper>
-      <div className={style.subjectContainer}>
+      <div className={`popup-container ${style.subjectContainer}`}>
         <form onSubmit={handleSubmit}>
           <div className={style.subjectForm}>
             <div className={style.inputs}>

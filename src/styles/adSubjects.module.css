@@ -1,8 +1,5 @@
 .subjectContainer{
     width: 20rem;
-    background-color: var(--bg-primary-colour);
-    border-radius: var(--box-round);
-    padding: var(--box-padding);
 }
 .subjectForm {
     margin-top: 1rem;

@@ -1,0 +1,6 @@
+.popup-container{
+    background-color: var(--bg-primary-colour);
+    border-radius: var(--box-round);
+    padding: var(--box-padding);
+    margin: var(--box-margin);
+}

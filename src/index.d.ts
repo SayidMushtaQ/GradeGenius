@@ -3,4 +3,8 @@ interface GradeContextTypes{
     subjects:{sub:string,marks:string}[],
     add:boolean,
     hanldeAddPopUp: () => void
+    calcualte:boolean
+    handleCalcualtePopUp:()=>void,
+    handleCalcaulation:()=>void,
+    result:{marks:number,total:number,percentage:number} | null
 }

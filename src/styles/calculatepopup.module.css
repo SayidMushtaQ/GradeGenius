@@ -1,0 +1,55 @@
+.calculatePopUpContainer{
+    width: 23rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: self-start;
+    gap: 20px;
+}
+.caulateHeaderTXT > header > h1{
+    margin-bottom: 5px;
+    color: var(--text-primary-colour);
+}
+.caulateHeaderTXT > header > p{
+    color: var(--text-secondary-colour);
+}
+.caulateTableList{
+    width: 100%;
+    display: flex;
+    justify-content: stretch;
+    align-items: center;
+}
+.caulateTableList table{
+    width: inherit;
+    border-collapse: collapse;
+    font-size: 18px;
+
+}
+.caulateTableList > table th,td{
+    padding: 7px;
+}
+.caulateTableList > table  th{
+    text-align: left;
+}
+.caulateTableList > table  th:nth-child(2){
+    text-align: right;
+}
+.caulateTableList > table tr td:nth-child(2){
+    width: 2rem;
+    text-align: center;
+}
+
+.calculateResults{
+    width: 100%;
+}
+
+.calculateResults div{
+    width: inherit;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+.calculateResults + button{
+    padding: 8px 15px;
+}

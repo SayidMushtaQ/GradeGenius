@@ -1,7 +1,11 @@
 import style from "../styles/grades.module.css";
 import { useGrade } from "../hooks/grade.context";
 export default function Grades() {
-  const { subjects,hanldeAddPopUp } = useGrade();
+  const { subjects,hanldeAddPopUp,handleCalcualtePopUp,handleCalcaulation } = useGrade();
+  const handleCalcualte = ()=>{
+    handleCalcaulation();
+    handleCalcualtePopUp()
+  }
   return (
     <>
       <div className={style.gradesContainer}>
@@ -15,6 +19,7 @@ export default function Grades() {
                   name="marks"
                   id="marks"
                   min={0}
+                  readOnly
                   value={item.marks}
                 />
               </div>
@@ -22,7 +27,7 @@ export default function Grades() {
           ))}
         </div>
         <div className={style.gradesActions}>
-          <button className="bth-primary">Calculate</button>
+          <button className="bth-primary" onClick={handleCalcualte}>Calculate</button>
           <button className="bth-primary" onClick={()=>hanldeAddPopUp()}>New sub</button>
         </div>
       </div>
