@@ -2,7 +2,7 @@ import PopUPWrapper from "./PopUPWrapper";
 import style from "../styles/calculatepopup.module.css";
 import { useGrade } from "../hooks/grade.context";
 export default function CalcualtePopUp() {
-  const {handleCalcualtePopUp,result} = useGrade()
+  const { subjects, handleCalcualtePopUp, result } = useGrade();
   return (
     <PopUPWrapper>
       <div className={`popup-container ${style.calculatePopUpContainer}`}>
@@ -21,22 +21,15 @@ export default function CalcualtePopUp() {
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>Englsih</td>
-                <td><b>69</b></td>
-              </tr>
-              <tr>
-                <td>Englsih</td>
-                <td><b>69</b></td>
-              </tr>
-              <tr>
-                <td>Englsih</td>
-                <td><b>69</b></td>
-              </tr>
-              <tr>
-                <td>Englsih</td>
-                <td><b>69</b></td>
-              </tr>
+              {subjects.slice(0,4).map((item,index) => (
+                <tr key={index}>
+                  <td>{item.sub}</td>
+                  <td>
+                    <b>{item.marks}</b>
+                  </td> 
+                </tr>
+              ))}
+              {subjects.length > 5 && <p>more . . . .</p>}
             </tbody>
           </table>
         </div>
@@ -60,7 +53,9 @@ export default function CalcualtePopUp() {
             </span>
           </div>
         </div>
-        <button className="bth-primary" onClick={()=>handleCalcualtePopUp()}>Ok</button>
+        <button className="bth-primary" onClick={() => handleCalcualtePopUp()}>
+          Ok
+        </button>
       </div>
     </PopUPWrapper>
   );

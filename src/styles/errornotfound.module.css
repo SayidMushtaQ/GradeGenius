@@ -13,7 +13,7 @@
     gap: 10px;
     padding-block: 1.1rem;
 }
-.notFoundHeader h2,p{
+.notFoundHeader > h2,.notFoundHeader > p{
     color: var(--text-secondary-colour);
 }
 .notFoundHeader  h2{

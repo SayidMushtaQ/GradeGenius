@@ -38,6 +38,9 @@
     width: 2rem;
     text-align: center;
 }
+.caulateTableList > table p{
+    color: var(--text-secondary-colour);
+}
 
 .calculateResults{
     width: 100%;
